@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>הצעת מחיר פלטפורמת ETF | matara.studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      :root {
+        --pm: #5b2c9e;
+        --pl: #7c3aed;
+        --pb: #a855f7;
+        --pg: rgba(124, 58, 237, 0.14);
+        --pbl: #f4eefe;
+        --pbs: #ede5fa;
+        --gold: #c9a961;
+        --goldbg: #f8f4ea;
+        --ink: #1a1f1a;
+        --inks: #3a4339;
+        --inkm: #6b7568;
+        --pw: #f4f3ed;
+        --line: #e5e4dd;
+        --white: #ffffff;
+        --d: "Frank Ruhl Libre", Georgia, serif;
+        --b: "Heebo", sans-serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        font-family: var(--b);
+        color: var(--ink);
+        background: #e0ddd8;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 40px 20px;
+      }
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm 16mm;
+        margin: 0 auto 30px;
+        background: white;
+        position: relative;
+        overflow: hidden;
+        page-break-after: always;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      }
+      .page:last-child {
+        page-break-after: auto;
+      }
+
+      /* COVER */
+      .cover {
+        background: linear-gradient(180deg, #fff 0%, #fafaf7 100%);
+        padding: 0;
+      }
+      .cd {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: 0;
+        pointer-events: none;
+      }
+      .c1 {
+        position: absolute;
+        top: -130mm;
+        left: -40mm;
+        width: 270mm;
+        height: 270mm;
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--pg), transparent 60%);
+      }
+      .c2 {
+        position: absolute;
+        bottom: -80mm;
+        right: -80mm;
+        width: 200mm;
+        height: 200mm;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(201, 169, 97, 0.07),
+          transparent 60%
+        );
+      }
+      .ci {
+        position: relative;
+        z-index: 1;
+        padding: 24mm 22mm 22mm;
+        display: flex;
+        flex-direction: column;
+        min-height: 261mm;
+      }
+      .ctop {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 32mm;
+      }
+      .cbrand {
+        line-height: 0;
+      }
+      .brand-logo {
+        display: block;
+        width: 118px;
+        height: auto;
+      }
+      .brand-logo--cover {
+        width: 150px;
+      }
+      .cmr {
+        text-align: right;
+      }
+      .cmrl {
+        font-size: 12px;
+        font-weight: 700;
+        color: var(--pm);
+        letter-spacing: 0.14em;
+        margin-bottom: 3px;
+      }
+      .cmrd {
+        font-size: 11px;
+        color: var(--inkm);
+      }
+      .cey {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--pm);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .cti {
+        font-family: var(--d);
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.05;
+        color: var(--ink);
+        letter-spacing: -0.025em;
+        margin-bottom: 10px;
+      }
+      .csu {
+        font-family: var(--d);
+        font-size: 22px;
+        font-style: italic;
+        color: var(--pm);
+        margin-bottom: 28mm;
+      }
+      .cdiv {
+        width: 54px;
+        height: 3px;
+        background: var(--pm);
+        margin-bottom: 18px;
+      }
+      .cbody {
+        font-size: 15px;
+        color: var(--inks);
+        line-height: 1.75;
+        max-width: 160mm;
+        margin-bottom: 12px;
+      }
+      .cgrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        padding-top: 11mm;
+        border-top: 1px solid var(--line);
+        margin-top: auto;
+      }
+      .cgl {
+        font-size: 10px;
+        color: var(--inkm);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .cgv {
+        font-family: var(--d);
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      /* HEADER */
+      .ph {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 9mm;
+        margin-bottom: 9mm;
+        border-bottom: 1px solid var(--line);
+      }
+      .ph-b {
+        line-height: 0;
+      }
+      .ph-c {
+        font-size: 10px;
+        color: var(--inkm);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      /* LABELS */
+      .sl {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--pm);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .st {
+        font-family: var(--d);
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 10px;
+      }
+      .ss {
+        font-size: 14px;
+        color: var(--inkm);
+        line-height: 1.65;
+        margin-bottom: 7mm;
+      }
+
+      /* WARNING BOX */
+      .warn {
+        background: #fff8e1;
+        border-right: 4px solid var(--gold);
+        padding: 5mm 7mm;
+        border-radius: 8px;
+        margin-bottom: 8mm;
+      }
+      .warn-label {
+        font-size: 11px;
+        font-weight: 700;
+        color: #92400e;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
+      }
+      .warn-text {
+        font-size: 13.5px;
+        color: #78350f;
+        line-height: 1.7;
+      }
+      .warn-text strong {
+        font-weight: 700;
+      }
+
+      /* PHASE CARDS */
+      .phase {
+        border-radius: 14px;
+        margin-bottom: 6mm;
+        overflow: hidden;
+        border: 1px solid var(--line);
+      }
+      .phase.featured {
+        border: 2px solid var(--pm);
+        box-shadow: 0 6px 24px rgba(124, 58, 237, 0.12);
+      }
+      .phase__head {
+        padding: 6mm 8mm;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .phase__head.p1 {
+        background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+      }
+      .phase__head.p2 {
+        background: var(--pbl);
+      }
+      .phase__head.p3 {
+        background: var(--pw);
+      }
+      .phase__badge {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 3px 12px;
+        border-radius: 100px;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
+      .phase__badge.p1 {
+        background: #bbf7d0;
+        color: #166534;
+      }
+      .phase__badge.p2 {
+        background: var(--pbs);
+        color: var(--pm);
+      }
+      .phase__badge.p3 {
+        background: var(--line);
+        color: var(--inkm);
+      }
+      .phase__title {
+        font-family: var(--d);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .phase__sub {
+        font-size: 13px;
+        color: var(--inkm);
+      }
+      .phase__price-block {
+        text-align: left;
+      }
+      .phase__price {
+        font-family: var(--d);
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--pm);
+        line-height: 1;
+      }
+      .phase__price-note {
+        font-size: 11px;
+        color: var(--inkm);
+        margin-top: 4px;
+      }
+      .phase__body {
+        padding: 6mm 8mm;
+        background: white;
+      }
+      .phase__items {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 6mm;
+        row-gap: 2.5mm;
+        margin-bottom: 4mm;
+      }
+      .phase__items li {
+        display: flex;
+        align-items: flex-start;
+        gap: 7px;
+        font-size: 12.5px;
+        color: var(--inks);
+        line-height: 1.5;
+      }
+      .phase__items li::before {
+        content: "";
+        flex-shrink: 0;
+        width: 13px;
+        height: 13px;
+        margin-top: 2px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%237C3AED'%3E%3Cpath fill-rule='evenodd' d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z' clip-rule='evenodd'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .phase__timeline {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--pm);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: var(--pbl);
+        border: 1px solid var(--pm);
+        padding: 3px 12px;
+        border-radius: 100px;
+      }
+      .phase-warning {
+        margin-top: 4mm;
+        padding: 4mm 5mm;
+        border-radius: 8px;
+        border-right: 4px solid #dc2626;
+        background: #fef2f2;
+        color: #991b1b;
+        font-size: 12.5px;
+        line-height: 1.65;
+        font-weight: 600;
+      }
+      .feature-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 4mm;
+        direction: rtl;
+        text-align: right;
+        font-size: 12.5px;
+        color: var(--inks);
+      }
+      .feature-table th,
+      .feature-table td {
+        padding: 3mm;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .feature-table th {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--pm);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        background: var(--pbl);
+      }
+      .feature-table td:first-child {
+        font-weight: 700;
+        color: var(--ink);
+      }
+      .feature-note {
+        font-size: 12px;
+        color: var(--inkm);
+        line-height: 1.6;
+        margin-bottom: 4mm;
+      }
+
+      /* STRATEGY SECTION */
+      .strategy-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+        margin-bottom: 8mm;
+      }
+      .strategy-item {
+        background: var(--pw);
+        border-radius: 10px;
+        padding: 5mm 6mm;
+        border-right: 3px solid var(--pm);
+      }
+      .strategy-item__title {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 6px;
+      }
+      .strategy-item__text {
+        font-size: 12.5px;
+        color: var(--inkm);
+        line-height: 1.6;
+      }
+      .strategy-item__pros {
+        font-size: 12px;
+        color: #166534;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+      .strategy-item__cons {
+        font-size: 12px;
+        color: #991b1b;
+        margin-top: 3px;
+      }
+
+      /* OPEN ITEMS */
+      .open-items {
+        background: var(--pbl);
+        border-radius: 10px;
+        padding: 6mm 7mm;
+        margin-bottom: 8mm;
+      }
+      .open-items__title {
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--pm);
+        margin-bottom: 8px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .open-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        font-size: 13px;
+        color: var(--inks);
+        line-height: 1.6;
+        padding: 3px 0;
+      }
+      .open-item::before {
+        content: "?";
+        flex-shrink: 0;
+        width: 18px;
+        height: 18px;
+        background: var(--pm);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+        font-weight: 700;
+        margin-top: 2px;
+      }
+
+      /* TERMS */
+      .terms-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm 7mm;
+        margin-bottom: 9mm;
+      }
+      .trm {
+        padding-bottom: 4mm;
+        border-bottom: 1px solid var(--line);
+      }
+      .trml {
+        font-size: 10px;
+        color: var(--inkm);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+      .trmv {
+        font-family: var(--d);
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink);
+        margin-bottom: 3px;
+      }
+      .trmn {
+        font-size: 11px;
+        color: var(--inkm);
+        line-height: 1.5;
+      }
+
+      /* STEPS */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5mm;
+        margin-bottom: 8mm;
+      }
+      .step {
+        background: var(--pw);
+        border-radius: 10px;
+        padding: 5mm;
+      }
+      .sn {
+        font-family: var(--d);
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--pm);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .sti {
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 4px;
+      }
+      .stx {
+        font-size: 12px;
+        color: var(--inkm);
+        line-height: 1.55;
+      }
+
+      /* CTA BLOCK */
+      .cta-block {
+        background: var(--ink);
+        border-radius: 14px;
+        padding: 9mm 10mm;
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-bg {
+        position: absolute;
+        top: -40mm;
+        left: -20mm;
+        width: 120mm;
+        height: 120mm;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(168, 85, 247, 0.14),
+          transparent 65%
+        );
+        pointer-events: none;
+      }
+      .cta-inner {
+        position: relative;
+        z-index: 1;
+      }
+      .cta-ey {
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--pb);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      .cta-ti {
+        font-family: var(--d);
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: 12px;
+      }
+      .cta-ti em {
+        font-style: italic;
+        color: var(--pb);
+      }
+      .cta-sub {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.72);
+        line-height: 1.7;
+        margin-bottom: 7mm;
+      }
+      .cta-contacts {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4mm;
+        margin-bottom: 7mm;
+      }
+      .cta-ci {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .cta-ci-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background: rgba(168, 85, 247, 0.12);
+        border: 1px solid rgba(168, 85, 247, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        flex-shrink: 0;
+      }
+      .cta-ci-label {
+        font-size: 9px;
+        color: rgba(255, 255, 255, 0.5);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+      }
+      .cta-ci-val {
+        font-size: 12px;
+        font-weight: 600;
+        color: white;
+      }
+      .cta-sig {
+        padding-top: 6mm;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .cta-sig-text {
+        font-family: var(--d);
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.75);
+        line-height: 1.75;
+        font-style: italic;
+        max-width: 140mm;
+      }
+      .cta-sig-name {
+        font-family: var(--d);
+        font-size: 15px;
+        color: white;
+        font-weight: 700;
+        margin-top: 3mm;
+      }
+
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        .page {
+          box-shadow: none;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PAGE 1: COVER -->
+    <div class="page cover">
+      <div class="cd">
+        <div class="c1"></div>
+        <div class="c2"></div>
+      </div>
+      <div class="ci">
+        <header class="ctop">
+          <div class="cbrand">
+            <img
+              class="brand-logo brand-logo--cover"
+              src="assets/Matara.Studio logo.png"
+              alt="Matara.Studio"
+            />
+          </div>
+          <div class="cmr">
+            <div class="cmrl">הצעת מחיר</div>
+            <div class="cmrd">יוני 2026</div>
+          </div>
+        </header>
+        <div>
+          <div class="cey">הצעה מותאמת אישית עבור</div>
+          <h1 class="cti">פלטפורמת ETF<br />בעברית</h1>
+          <p class="csu">
+            עבור: נתי לייזר, מאת: סטודיו מטרה, פיתוח אתרים בהתאמה אישית
+          </p>
+          <div class="cdiv"></div>
+          <p class="cbody">
+            לפנינו פרויקט בעל ערך ייחודי בשוק המקומי, הקמת פלטפורמת מידע מקיפה
+            עבור קרנות ETF בשפה העברית, המבוססת על משיכת נתונים פיננסיים בזמן
+            אמת. אין מדובר באתר תדמית סטנדרטי, אלא במוצר דיגיטלי מורכב הדורש
+            אפיון ארכיטקטורה מעמיק, פיתוח מותאם אישית ואינטגרציה חלקה של ממשקי
+            API לעולמות התוכן הפיננסי.
+          </p>
+          <p class="cbody">
+            תשתית העבודה המוצעת מחולקת לשלושה שלבים ברורים, מבנה המאפשר התנעה
+            מהירה, בחינת היתכנות וקבלת החלטות מושכלות להמשך הדרך בהתאם לתוצאות
+            בשטח.
+          </p>
+        </div>
+        <div class="cgrid">
+          <div>
+            <div class="cgl">תאריך</div>
+            <div class="cgv">01.06.2026</div>
+          </div>
+          <div>
+            <div class="cgl">תוקף ההצעה</div>
+            <div class="cgv">30 ימים</div>
+          </div>
+          <div>
+            <div class="cgl">מספר שלבים</div>
+            <div class="cgv">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 2: IMPORTANT NOTE + PHASES 1-2 -->
+    <div class="page">
+      <header class="ph">
+        <div class="ph-b">
+          <img
+            class="brand-logo"
+            src="assets/Matara.Studio logo.png"
+            alt="Matara.Studio"
+          />
+        </div>
+        <div class="ph-c">01 / שלבי הפרויקט</div>
+      </header>
+
+      <div class="warn">
+        <div class="warn-label">⚠️ דגשים מרכזיים לתחילת העבודה</div>
+        <div class="warn-text">
+          הצעה זו מהווה <strong>מתווה ראשוני ומסגרת עבודה כללית</strong>. תמחור
+          השלבים הבאים יגובש באופן סופי ומדויק עם סיום שלב האפיון, לאחר הגדרת
+          ספקי הנתונים הנדרשים, נפח המידע ומודל המונטיזציה הנבחר.
+          <strong>עלויות הרישוי והחיבור לממשקי API פיננסיים חיצוניים</strong>
+          ,אינן כלולות במסגרת הצעה זו וישולמו ישירות לספקי המידע.
+        </div>
+      </div>
+
+      <!-- PHASE 1 -->
+      <div class="phase featured">
+        <div class="phase__head p1">
+          <div>
+            <span class="phase__badge p1">שלב ראשון לביצוע מיידי</span>
+            <h3 class="phase__title">אפיון ואסטרטגיה מוצרית</h3>
+            <p class="phase__sub">
+              גיבוש ארכיטקטורת המוצר והמודל העסקי לפני שלב הפיתוח
+            </p>
+          </div>
+          <div class="phase__price-block">
+            <div class="phase__price">4,200 ₪</div>
+          </div>
+        </div>
+        <div class="phase__body">
+          <ul class="phase__items">
+            <li>הגדרת מודל המונטיזציה בין אם מנויים, פרסום או לידים</li>
+            <li>מיפוי מקיף של חוויית המשתמש, דפי המערכת והפיצ'רים</li>
+            <li>איתור ספק הנתונים המתאים ביותר ובחינת תנאי הרישוי</li>
+            <li>אפיון קהלי היעד וגיבוש אסטרטגיה למשיכת תנועה לאתר</li>
+            <li>יצירת מסמך אפיון טכנולוגי מלא הכולל אבות טיפוס רעיוניים</li>
+            <li>הגשת הצעת מחיר תקציבית ומדויקת לשלבי הפיתוח הבאים</li>
+          </ul>
+          <div class="phase__timeline">⏱ משך ביצוע צפוי כ 5 עד 7 ימי עסקים</div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="page_break" style="height: 10px"></div>
+
+      <div class="phase">
+        <div class="phase__head p2">
+          <div>
+            <span class="phase__badge p2">שלב שני פיתוח MVP</span>
+            <h3 class="phase__title">גרסה ראשונית לעלייה לאוויר</h3>
+            <p class="phase__sub">
+              פלטפורמה מתפקדת המבוססת על נתונים בזמן אמת להשקה ראשונית
+            </p>
+          </div>
+          <div class="phase__price-block">
+            <div class="phase__price">ייקבע בתום<br />שלב האפיון</div>
+            <div class="phase__price-note">
+              טווח תקציבי משוער בין 18,000 ל 28,000 ₪
+            </div>
+          </div>
+        </div>
+        <div class="phase__body">
+          <ul class="phase__items">
+            <li>הקמת ארכיטקטורת בסיס הנתונים ותשתית השרתים</li>
+            <li>אינטגרציה מלאה לנתוני ETF בזמן אמת באמצעות API</li>
+            <li>פיתוח ממשק תצוגת קרנות הכולל מסננים בסיסיים</li>
+            <li>עמודי פרופיל ייעודיים לכל קרן להצגת נתונים וביצועים</li>
+            <li>מערכת להשוואה מהירה ונוחה בין הקרנות השונות</li>
+            <li>עמוד הבית ומערך ניווט חווייתי באתר</li>
+            <li>התאמה מלאה לחוויית גלישה רספונסיבית בנייד</li>
+            <li>תשתית בלוג ו-SEO בסיסי</li>
+          </ul>
+          <div class="phase__timeline">
+            ⏱ משך ביצוע מוערך בין 6 ל 10 שבועות מתחילת הפיתוח
+          </div>
+          <div class="phase-warning">
+            הפלטפורמה דורשת ככל הנראה, תחזוקה טכנית חודשית שוטפת, כולל עדכוני שרת,
+            ניטור ממשקי API, טיפול בשגיאות ואבטחה. עלויות התחזוקה החודשיות יתומחרו
+            בנפרד לאחר שלב האפיון.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3: PHASE 3 + STRATEGY + OPEN ITEMS -->
+    <div class="page">
+      <header class="ph">
+        <div class="ph-b">
+          <img
+            class="brand-logo"
+            src="assets/Matara.Studio logo.png"
+            alt="Matara.Studio"
+          />
+        </div>
+        <div class="ph-c">02 / המשך ואסטרטגיה</div>
+      </header>
+
+      <!-- PHASE 3 -->
+      <div class="phase" style="margin-bottom: 8mm">
+        <div class="phase__head p3">
+          <div>
+            <span class="phase__badge p3">שלב שלישי צמיחה והרחבה</span>
+            <h3 class="phase__title">רכיבים ויכולות מתקדמות</h3>
+            <p class="phase__sub">
+              פיתוח פיצ'רים מתקדמים על בסיס משוב משתמשים ונתוני השוק
+            </p>
+          </div>
+          <div class="phase__price-block">
+            <div class="phase__price">לפי דרישה</div>
+            <div class="phase__price-note">
+              480 ₪ עבור עמוד או 350 ₪ לשעת עבודה
+            </div>
+          </div>
+        </div>
+        <div class="phase__body">
+          <table class="feature-table">
+            <thead>
+              <tr>
+                <th>פיצ'ר</th>
+                <th>תיאור</th>
+                <th>הערכת שעות</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>מנויים ותשלומים</td>
+                <td>הקמת מסלולי פרימיום, תהליך רכישה וחיבור ספק סליקה</td>
+                <td>40-60 שעות</td>
+              </tr>
+              <tr>
+                <td>אזור פורטפוליו אישי</td>
+                <td>אזור משתמש אישי לניהול ומעקב אחר תיק קרנות ETF נבחר</td>
+                <td>30-50 שעות</td>
+              </tr>
+              <tr>
+                <td>תרשימים וויזואליזציות</td>
+                <td>רכיבי גרפים אינטראקטיביים והצגה ויזואלית של נתונים</td>
+                <td>20-35 שעות</td>
+              </tr>
+              <tr>
+                <td>מערכת התראות</td>
+                <td>התראות אוטומטיות למשתמשים ועדכוני מערכת על נתוני ETF</td>
+                <td>15-25 שעות</td>
+              </tr>
+              <tr>
+                <td>שילוב פרסום</td>
+                <td>הטמעת מיקומי פרסום וחיבור תשתיות פרסום דיגיטליות</td>
+                <td>8-15 שעות</td>
+              </tr>
+            </tbody>
+          </table>
+     
+          <div class="phase__timeline">
+            ⏱ לוחות הזמנים ייקבעו בהתאם לרכיבים הנבחרים
+          </div>
+        </div>
+      </div>
+
+      <!-- STRATEGY QUESTION -->
+      <div class="sl">שאלות אסטרטגיות לגיבוש בשלב האפיון</div>
+      <h2 class="st" style="font-size: 22px; margin-bottom: 6mm">
+        מהו מודל המונטיזציה המוביל של הפלטפורמה
+      </h2>
+
+      <div class="strategy-grid">
+        <div class="strategy-item">
+          <div class="strategy-item__title">🎯 פלטפורמת לידים לברוקרים</div>
+          <div class="strategy-item__text">
+            הפניית גולשים לפתיחת חשבונות מסחר וקבלת עמלה על כל הרשמה מוצלחת.
+          </div>
+          <div class="strategy-item__pros">
+            ✓ פוטנציאל ליצירת הכנסה בטווח קצר
+          </div>
+          <div class="strategy-item__cons">
+            ✓ מצריך יצירת שיתופי פעולה עסקיים מול גופים פיננסיים
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-item__title">📢 שטחי פרסום</div>
+          <div class="strategy-item__text">
+            שילוב מערכות מודעות או עבודה ישירה מול מפרסמים בשוק ההון. מתאים לאתר
+            בעל נפח תנועה משמעותי.
+          </div>
+          <div class="strategy-item__pros">
+            ✓ מודל פסיבי ופשוט להטמעה טכנולוגית
+          </div>
+          <div class="strategy-item__cons">
+            ✓ דורש מסה קריטית של גולשים קבועים
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-item__title">💎 מנויי פרימיום</div>
+          <div class="strategy-item__text">
+            חסימת כלים מתקדמים כגון גרפים מורכבים, התראות בזמן אמת וניהול תיק
+            אישי תחת דמי מנוי קבועים.
+          </div>
+          <div class="strategy-item__pros">✓ יצירת תזרים הכנסות קבוע ויציב</div>
+          <div class="strategy-item__cons">
+            ✓ מחייב אספקת ערך מוסף גבוה וייחודי בשוק
+          </div>
+        </div>
+        <div class="strategy-item">
+          <div class="strategy-item__title">🔗 שיווק שותפים</div>
+          <div class="strategy-item__text">
+            הטמעת קישורים ייעודיים לביצוע פעולות מסחר בפלטפורמות מורשות תמורת
+            עמלות הפניה.
+          </div>
+          <div class="strategy-item__pros">✓ יישום טכנולוגי פשוט ומהיר</div>
+          <div class="strategy-item__cons">
+            ✓ גובה העמלות פר פעולה נחשב לנמוך יחסית
+          </div>
+        </div>
+      </div>
+
+      <!-- OPEN ITEMS -->
+      <div class="open-items">
+        <div class="open-items__title">סוגיות פתוחות שיוכרעו בתהליך האפיון</div>
+        <div class="open-item">
+          בחירת ספק הנתונים הפיננסיים המתאים מבין החלופות המובילות בשוק
+        </div>
+        <div class="open-item">
+          הגדרת היקף הקרנות המוצגות בין אם שוק ישראלי, שוק עולמי או שילוב של
+          השניים
+        </div>
+        <div class="open-item">
+          קביעת מודל ההכנסה הראשי המכתיב את מבנה האתר וחוויות המשתמש
+        </div>
+        <div class="open-item">
+          בחינת נחיצותו של אזור אישי ומנגנון הרשמה כבר בגרסת המוצר הראשונית
+        </div>
+        <div class="open-item">
+          החלטה על תמיכה בשפה העברית בלבד או הקמת תשתית רב לשונית המשלבת אנגלית
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 4: TERMS + STEPS + CTA -->
+    <div class="page">
+      <header class="ph">
+        <div class="ph-b">
+          <img
+            class="brand-logo"
+            src="assets/Matara.Studio logo.png"
+            alt="Matara.Studio"
+          />
+        </div>
+        <div class="ph-c">03 / תנאים מסחריים והשלבים הבאים</div>
+      </header>
+
+      <div class="sl">תנאים מסחריים</div>
+      <h2 class="st" style="font-size: 26px; margin-bottom: 7mm">
+        דגשים משפטיים וכלליים
+      </h2>
+
+      <div class="terms-grid">
+     
+        <div class="trm">
+          <div class="trml">תוקף ההצעה</div>
+          <div class="trmv">בתוקף למשך 30 ימים</div>
+          <div class="trmn">המתווה תקף עד לתאריך 01.07.2026.</div>
+        </div>
+        <div class="trm">
+          <div class="trml">תנאי תשלום עבור שלב האפיון</div>
+          <div class="trmv">תשלום מלא מראש</div>
+          <div class="trmn">
+            האפיון מהווה תהליך ייעוץ עצמאי ומוסדר. התשלום יבוצע לפני תחילת
+            הפעילות.
+          </div>
+        </div>
+        <div class="trm">
+          <div class="trml">תנאי תשלום עבור שלב הפיתוח</div>
+          <div class="trmv">חלוקה של 40 אחוזים וכן 30 אחוזים ו 30 אחוזים</div>
+          <div class="trmn">
+            התשלומים יועברו עם מקדמת ההתנעה, בנקודת האמצע ועם מסירת המוצר.
+          </div>
+        </div>
+        <div class="trm">
+          <div class="trml">עלויות רישוי וממשקי מידע</div>
+          <div class="trmv">עלויות חיצוניות</div>
+          <div class="trmn">
+            כלל התשלומים לספקי הנתונים ישולמו באופן ישיר על ידי הלקוח.
+          </div>
+        </div>
+        <div class="trm">
+          <div class="trml">מדיניות ביטול התקשרות</div>
+          <div class="trmv">ניתן לבצע בכל עת</div>
+          <div class="trmn">
+            במקרה של עצירת הפרויקט יבוצע חיוב יחסי על פי היקף העבודה שבוצעה
+            בפועל.
+          </div>
+        </div>
+      </div>
+
+      <div class="sl">מפת דרכים להתקדמות</div>
+      <h2 class="st" style="font-size: 24px; margin-bottom: 6mm">
+        שלושה צעדים פשוטים ליציאה לדרך
+      </h2>
+
+      <div class="steps" style="margin-bottom: 8mm">
+        <div class="step">
+          <div class="sn">01</div>
+          <div class="sti">אישור שלב האפיון</div>
+          <p class="stx">
+            מתחילים בהסדרת התשלום עבור שלב האפיון בסך 2,800 ₪ לצורך התנעת התהליך
+            באופן רשמי.
+          </p>
+        </div>
+        <div class="step">
+          <div class="sn">02</div>
+          <div class="sti">עבודת מחקר ואפיון מוצרי</div>
+          <p class="stx">
+            במהלך ימי העבודה נמפה את הדרישות, נשיב על השאלות הפתוחות ונגיש מסמך
+            ארכיטקטורה מקיף לצד תמחור סופי לפיתוח.
+          </p>
+        </div>
+        <div class="step">
+          <div class="sn">03</div>
+          <div class="sti">קבלת החלטה לגבי שלב ה MVP</div>
+          <p class="stx">
+            עם קבלת מסמך האפיון המלא תתקבל החלטה מושכלת לגבי המשך הפיתוח ללא כל
+            התחייבות מוקדמת מעבר לשלב הנוכחי.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-block">
+        <div class="cta-bg"></div>
+        <div class="cta-inner">
+          <p class="cta-ey">יוצאים לדרך משותפת</p>
+          <h2 class="cta-ti">
+            הצעד המקצועי הראשון הוא<br /><em>שלב האפיון והתכנון</em>
+          </h2>
+          <p class="cta-sub">
+            תהליך אפיון מסודר מהווה את ההשקעה הנבונה והמשמעותית ביותר בניהול
+            סיכוני הפרויקט. שלב זה ימנע הוצאות מיותרות בעתיד, יגדיר במדויק את
+            כיווני הפיתוח ויעניק לך תמונת מצב תקציבית שקופה ומלאה לפני התחייבות
+            להשקעה נרחבת.
+          </p>
+          <div class="cta-contacts">
+            <div class="cta-ci">
+              <div class="cta-ci-icon">📞</div>
+              <div>
+                <div class="cta-ci-label">הודעות וואטסאפ</div>
+                <div class="cta-ci-val">054-4631809</div>
+              </div>
+            </div>
+            <div class="cta-ci">
+              <div class="cta-ci-icon">✉</div>
+              <div>
+                <div class="cta-ci-label">דואר אלקטרוני</div>
+                <div class="cta-ci-val">office@matara.studio</div>
+              </div>
+            </div>
+            <div class="cta-ci">
+              <div class="cta-ci-icon">🌐</div>
+              <div>
+                <div class="cta-ci-label">אתר רשמי</div>
+                <div class="cta-ci-val">matara.studio</div>
+              </div>
+            </div>
+          </div>
+          <div class="cta-sig">
+            <p class="cta-sig-text">
+              מדובר בפרויקט רחב בעל פוטנציאל עסקי ליצירת פלטפורמה חלוצית בשפה
+              העברית. הדרך הבטוחה והנכונה ביותר להבטיח את הצלחת המיזם היא תכנון
+              ואפיון קפדני ומקצועי מקצה לקצה.
+            </p>
+            <p class="cta-sig-name">בברכה, הסטודיו רון</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
